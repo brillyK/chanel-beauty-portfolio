@@ -1,0 +1,447 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-MediumCn.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-MediumCnIt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-MediumIt.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Cn.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-CnIt.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-SemiboldCn.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-SemiboldCnIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-SemiboldIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-BoldCn.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-BoldIt.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../fonts/minion-pro/MinionPro-BoldCnIt.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-stretch: condensed;
+}
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+     -moz-appearance: checkbox;
+          appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Urbanist", "Malgun Gothic", "맑은 고딕", sans-serif;
+  color: #1d1d1d;
+}
+
+/* desktop */
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+/* 색상 변수 및 폰트 설정 */
+:root {
+  --font-family-main: "Urbanist", "Noto Sans KR", sans-serif;
+  --font-family-sub: "Playfair Display", "Noto Sans KR", sans-serif;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 34px;
+  height: 72px;
+  background-color: rgba(255, 255, 255, 0.8); /* 블러 효과를 줄 배경색 */
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* 블러 효과 적용 */
+}
+#header a {
+  color: #fff;
+  font-family: "Minion Pro", "Noto Sans KR", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.horizontal-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth; /* 스크롤을 부드럽게 만듦 */
+  -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤을 활성화 */
+}
+
+.section {
+  flex: 0 0 100vw;
+  min-width: 100vw; /* 최소 너비는 뷰포트 너비로 설정 */
+  height: 100vh;
+  padding: 50px;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.section:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+#section1 .bg-img img {
+  display: block;
+  height: 100vh; /* 예시로 설정한 요소의 높이 */
+  background-image: url("../../images/main-bg-img-1440px.jpg"); /* 배경 이미지 URL */
+  background-size: auto 100%; /* 이미지의 원래 비율을 유지하면서 높이에 맞추기 */
+  background-position: center;
+}/*# sourceMappingURL=styles.css.map */

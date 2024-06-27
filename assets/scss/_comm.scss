@@ -1,0 +1,25 @@
+/* 색상 변수 및 폰트 설정 */
+:root {
+    --font-family-main: 'Urbanist', 'Noto Sans KR', sans-serif;
+    --font-family-sub: 'Playfair Display', 'Noto Sans KR', sans-serif;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 34px;
+    height: 72px;
+    background-color: rgba(255, 255, 255, 0.8); /* 블러 효과를 줄 배경색 */
+    backdrop-filter: blur(10px); /* 블러 효과 적용 */
+    a {
+        color: $white;
+        font-family: $fontFamily;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+}
