@@ -379,15 +379,53 @@ legend {
   align-items: center;
   padding: 0 34px;
   height: 72px;
-  background-color: rgba(255, 255, 255, 0.8); /* 블러 효과를 줄 배경색 */
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px); /* 블러 효과 적용 */
+  background-color: rgb(0, 0, 0);
+  z-index: 1000;
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
 }
 #header a {
   color: #fff;
   font-family: "Minion Pro", "Noto Sans KR", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
+}
+#header .header-logo .logo-b {
+  display: none;
+}
+
+#header.blur {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(225, 225, 225, 0.3);
+  border: 1px solid #000;
+}
+#header.blur a {
+  color: #000;
+}
+#header.blur a img {
+  color: #000;
+}
+#header.blur .header-logo .logo-w {
+  display: none;
+}
+#header.blur .header-logo .logo-b {
+  display: block;
+}
+
+.search-button {
+  position: absolute;
+  bottom: 45px;
+  right: 50px;
+  width: 100px;
+}
+.search-button #sch-icon {
+  width: 100px;
+}
+.search-button #sch-icon img {
+  display: block;
+  width: 100px;
 }
 
 * {
@@ -408,6 +446,7 @@ body {
   height: 100vh;
   scroll-behavior: smooth; /* 스크롤을 부드럽게 만듦 */
   -webkit-overflow-scrolling: touch; /* iOS에서 부드러운 스크롤을 활성화 */
+  position: relative;
 }
 
 .section {
@@ -438,10 +477,84 @@ body {
   line-height: 1.6;
 }
 
-#section1 .bg-img img {
+#section1 {
+  position: relative;
+  overflow: hidden;
+}
+#section1 .black-box {
   display: block;
-  height: 100vh; /* 예시로 설정한 요소의 높이 */
-  background-image: url("../../images/main-bg-img-1440px.jpg"); /* 배경 이미지 URL */
-  background-size: auto 100%; /* 이미지의 원래 비율을 유지하면서 높이에 맞추기 */
-  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 72px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 2;
+}
+#section1 .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#section1 .bg-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#section1 .contact_wrap {
+  width: 5000px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% - 30px));
+  animation-name: main_slide;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  font-size: 0;
+}
+#section1 .contact_wrap img {
+  width: 1412px;
+  height: 200px;
+  margin-right: 100px;
+}
+@keyframes main_slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -1512px;
+  }
+}
+#section1 .img-rotate {
+  position: absolute;
+  bottom: 87px;
+  right: 98px;
+}
+#section1 .img-rotate span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Minion Pro", "Noto Sans KR", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  z-index: 3;
+}
+#section1 .img-rotate img {
+  width: 164px;
+  animation: rotate 6s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */
