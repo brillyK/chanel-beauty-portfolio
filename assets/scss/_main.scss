@@ -20,7 +20,7 @@ body {
 }
 
 .section {
-    flex: 0 0 100vw;
+    flex: 0 0 auto;
     min-width: 100vw; /* 최소 너비는 뷰포트 너비로 설정 */
     height: 100vh;
     padding: 50px;
@@ -115,7 +115,7 @@ body {
         }
         img {
             width: 164px;
-            animation: rotate 6s linear infinite;
+            transition: transform 0.3s linear;
         }
     }
     @keyframes rotate {
@@ -124,6 +124,70 @@ body {
         }
         100% {
             transform: rotate(360deg);
+        }
+    }
+}
+
+#section2 {
+    width: 1440px;
+    background-color: $white;
+    position: relative;
+    .text-area {
+        font-family: $fontFamily;
+        font-size: 132px;
+        color: $primary;
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        transform: translateY(-50%);
+        z-index: 2;
+        text-align: left;
+        .text {
+            overflow: hidden;
+            position: relative;
+            line-height: 146px;
+            z-index: 2;
+            div {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+    }
+    .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        img {
+            width: 718px;
+            vertical-align: top;
+        }
+    }
+    .info {
+        position: absolute;
+        top: 65%;
+        left: 920px;
+        text-align: left;
+        h3 {
+            font-size: 24px;
+            font-family: $fontFamily;
+            font-weight: normal;
+        }
+        .description {
+            margin-top: 6px;
+            font-size: 14px;
+            color: $gray-500;
+        }
+        .btn-more {
+            margin-top: 45px;
+            a {
+                color: $black;
+                img {
+                    width: 32px;
+                    vertical-align: middle;
+                    margin-left: 8px;
+                }
+            }
         }
     }
 }
