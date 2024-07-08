@@ -137,7 +137,7 @@ body {
         font-size: 132px;
         color: $primary;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 32px;
         transform: translateY(-50%);
         z-index: 2;
@@ -186,6 +186,34 @@ body {
                     width: 32px;
                     vertical-align: middle;
                     margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+#section3 {
+    width: 2065px;
+    height: 100vh;
+    float: left;
+    background-color: $white;
+    border-left: 1px solid rgba(151, 151, 151, 0.2);
+    .inner {
+        margin-top: 50vh;
+        transform: translateY(calc(-50% + 35px));
+        .items {
+            width: 100%;
+            padding: 86px 0 0 44px;
+            border-top: 1px solid rgba(151, 151, 151, 0.2);
+            ul {
+                .item {
+                    position: relative;
+                    display: inline-block;
+                    padding-right: 279px;
+                    width: 526px;
+                    height: 378px;
+                    vertical-align: top;
+                    margin-left: 68px;
                 }
             }
         }
