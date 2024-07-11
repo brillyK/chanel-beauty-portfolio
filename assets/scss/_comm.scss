@@ -11,15 +11,13 @@
     right: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 34px;
     height: 72px;
     background-color: rgb(0, 0, 0);
-    // backdrop-filter: blur(5px);
     z-index: 1000;
     transition: backdrop-filter 0.3s ease;
     a {
-        color: $white;
+        color: $black;
         font-family: $fontFamily;
         font-weight: bold;
         font-size: 1.5rem;
@@ -50,22 +48,25 @@
     }
 }
 
-.search-button {
-    position: absolute;
-    bottom: 45px;
-    right: 50px;
-    width: 100px;
-    #sch-icon {
-        width: 100px;
-        img {
-            display: block;
+.content_area {
+    position: relative;
+    .search-button {
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 2;
+        #sch-icon {
             width: 100px;
-        }
-        .icon-w {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            z-index: 1;
+            img {
+                display: block;
+                width: 100px;
+            }
+            .icon-w {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+            }
         }
     }
 }
