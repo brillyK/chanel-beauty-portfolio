@@ -14,431 +14,796 @@
         />
         <!-- css -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <script type="text/javascript" async="" src="./assets/js/ch-plugin-web.js" charset="UTF-8"></script>
+        <script src="./assets/js/cookiesync.js"></script>
+        <script src="./assets/js/AceCounter_AW.js"></script>
+        <script type="text/javascript">
+            var json_locale_data = {
+                domain: 'messages',
+                locale_data: { messages: { '': { lang: 'ATF', 'plural-forms': 'nplurals=1; plural=0' } } },
+            }
+        </script>
+        <script type="text/javascript" src="./assets/js/gd_gettext.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/underscore-min.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="./assets/js/additional-methods.min.js"></script>
+        <script type="text/javascript" src="./assets/js/numeral.min.js"></script>
+        <script type="text/javascript" src="./assets/js/accounting.min.js"></script>
+        <script type="text/javascript" src="./assets/js/money.min.js"></script>
+        <script type="text/javascript" src="./assets/js/chosen.jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/placeholders.jquery.min.js"></script>
+        <!--[if gt IE 8]-->
+        <script type="text/javascript" src="./assets/js/clipboard.min.js"></script>
+        <!--[endif]-->
+        <script type="text/javascript" src="./assets/js/jquery.vticker.js"></script>
+        <script type="text/javascript" src="./assets/js/gd_ui.js"></script>
+
+        <script type="text/javascript" src="./assets/js/gd_common.js"></script>
+
+        <!-- Add script : start -->
+        <script type="text/javascript" src="./assets/js/gd_visit.js"></script>
+        <script type="text/javascript" src="./assets/js/jquery.cookie.js"></script>
+        <!-- Add script : end -->
+
+        <style type="text/css">
+            body {
+            }
+
+            /* body > #wrap > #header_warp : 상단 영역 */
+            #header_warp {
+            }
+
+            /* body > #wrap > #container : 메인 영역 */
+            #container {
+            }
+
+            /* body > #wrap > #footer_wrap : 하단 영역 */
+            #footer_wrap {
+            }
+        </style>
+
+        <script type="text/javascript" src="./assets/js/wcslog.js"></script>
+        <script
+            type="text/javascript"
+            src="./assets/js/naverCommonInflowScript.js"
+            id="naver-common-inflow-script"
+        ></script>
+        <!-- AceCounter Log Gathering Script V.8.0.2019080601 -->
+        <script language="javascript">
+            var _AceGID = (function () {
+                var Inf = ['gtc4.acecounter.com', '8080', 'BS1A46385595123', 'AW', '0', 'NaPm,Ncisy', 'ALL', '0']
+                var _CI = !_AceGID ? [] : _AceGID.val
+                var _N = 0
+                var _T = new Image(0, 0)
+                if (_CI.join('.').indexOf(Inf[3]) < 0) {
+                    _T.src = 'https://' + Inf[0] + '/?cookie'
+                    _CI.push(Inf)
+                    _N = _CI.length
+                }
+                return { o: _N, val: _CI }
+            })()
+            var _AceCounter = (function () {
+                var G = _AceGID
+                var _sc = document.createElement('script')
+                var _sm = document.getElementsByTagName('script')[0]
+                if (G.o != 0) {
+                    var _A = G.val[G.o - 1]
+                    var _G = _A[0].substr(0, _A[0].indexOf('.'))
+                    var _C = _A[7] != '0' ? _A[2] : _A[3]
+                    var _U = _A[5].replace(/\,/g, '_')
+                    _sc.src =
+                        'https:' +
+                        '//cr.acecounter.com/Web/AceCounter_' +
+                        _C +
+                        '.js?gc=' +
+                        _A[2] +
+                        '&py=' +
+                        _A[4] +
+                        '&gd=' +
+                        _G +
+                        '&gp=' +
+                        _A[1] +
+                        '&up=' +
+                        _U +
+                        '&rd=' +
+                        new Date().getTime()
+                    _sm.parentNode.insertBefore(_sc, _sm)
+                    return _sc.src
+                }
+            })()
+        </script>
+        <!-- AceCounter Log Gathering Script End -->
+
+        <!-- WEBI -->
+        <link type="text/css" rel="stylesheet" href="./assets/css/webi.css" />
+        <link type="text/css" rel="stylesheet" href="./assets/fonts/minion-pro/font.css" />
+        <link type="text/css" rel="stylesheet" href="./assets/css/webi_animate.css" />
+
+        <link rel="stylesheet" href="./assets/css/animate.css" />
+        <script type="text/javascript" src="./assets/js/wow.js"></script>
+
+        <script type="text/javascript" src="./assets/js/webi.js"></script>
+        <script type="text/javascript" src="./assets/js/common.js"></script>
+
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <script>
+            function parsePureNumber(number) {
+                var ch_pureNumber = number.replace(/[^0-9\.]+/g, '')
+                if (ch_pureNumber === '') {
+                    return null
+                }
+                return parseFloat(ch_pureNumber) || 0
+            }
+            var settings = {
+                // action banner z index is 199997 ~ 199998
+                zIndex: 100000,
+                pluginKey: 'b1e38dde-eb43-4d8b-9c6f-e9b2c15a29d5',
+            }
+            ;(function () {
+                var w = window
+                if (w.ChannelIO) {
+                    return (window.console.error || window.console.log || function () {})(
+                        'ChannelIO script included twice.',
+                    )
+                }
+                var ch = function () {
+                    ch.c(arguments)
+                }
+                ch.q = []
+                ch.c = function (args) {
+                    ch.q.push(args)
+                }
+                w.ChannelIO = ch
+                function l() {
+                    if (w.ChannelIOInitialized) {
+                        return
+                    }
+                    w.ChannelIOInitialized = true
+                    var s = document.createElement('script')
+                    s.type = 'text/javascript'
+                    s.async = true
+                    s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js'
+                    s.charset = 'UTF-8'
+                    var x = document.getElementsByTagName('script')[0]
+                    x.parentNode.insertBefore(s, x)
+                }
+                if (document.readyState === 'complete') {
+                    l()
+                } else if (window.attachEvent) {
+                    window.attachEvent('onload', l)
+                } else {
+                    window.addEventListener('DOMContentLoaded', l, false)
+                    window.addEventListener('load', l, false)
+                }
+            })()
+            if (settings && settings.memberId && settings.memberId.indexOf('=gSess.memId') >= 0) {
+                console.error(
+                    'You do not using godomall 5. please visit https://developers.channel.io/docs/guide-for-famous-builders and find correct one',
+                )
+            } else {
+                ChannelIO('boot', settings)
+            }
+        </script>
+        <script>
+            wow = new WOW({
+                animateClass: 'animated',
+                offset: 100,
+                callback: function (box) {
+                    console.log('WOW: animating <' + box.tagName.toLowerCase() + '>')
+                },
+            })
+            wow.init()
+        </script>
+
         <!-- js -->
         <script defer src="./assets/js/comm.js"></script>
         <script defer src="./assets/js/main.js"></script>
     </head>
-    <body>
+    <body class="body-main body-index pc">
+        <div class="top_area"></div>
         <div id="wrap">
-            <div id="header-wrap">
+            <div id="header_warp">
                 <div id="header">
-                    <a href="#" class="btn-header-cart">Cart(0)</a>
-
-                    <div class="header-logo">
+                    <a href="#" class="btn_header_cart">Cart(0)</a>
+                    <div class="header_logo">
                         <a href="/">
-                            <img src="./images/chanel-logo.svg" alt="logo-image" class="logo-w" />
                             <img src="./images/chanel-logo-black.svg" alt="logo-image" class="logo-b" />
                         </a>
                     </div>
-                    <a href="javascript:;" class="btn-header-menu js-btn-menu">Menu</a>
+                    <a href="javascript:;" class="btn_header_menu js_btn_menu">Menu</a>
+                </div>
+                <!-- //header -->
+                <div class="cover" style="left: -1px; right: auto; height: 71px; width: 1921px"></div>
+                <div id="popMenu">
+                    <button class="btn_close">(Close)</button>
+                    <div class="menu_wrap">
+                        <ul class="left_menu">
+                            <li>
+                                <a href="#">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="is-sub">SHOP<span class="icon_arrow"></span></a>
+                                <div class="category">
+                                    <ul>
+                                        <li>
+                                            <a href="#">(Gift)</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">(COFFEE)</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">(TEA)</a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">(Goods)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#">FIND BEANS</a>
+                            </li>
+
+                            <li>
+                                <a href="#">FROMHERAS CLUB</a>
+                            </li>
+                            <li>
+                                <a href="#">HERAS CLASS</a>
+                            </li>
+                        </ul>
+                        <ul class="right_menu">
+                            <li>
+                                <a href="#">MY PAGE</a>
+                            </li>
+                            <li>
+                                <a href="#">LOGIN</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="horizontal-scroll-container" id="horizontalScroll">
-                <div class="section" id="section1">
-                    <div class="black-box"></div>
-                    <div class="bg-img">
-                        <img src="./images/last-bg-img.jpg" alt="image" />
-                    </div>
-                    <div class="contact_wrap">
-                        <img src="./images/CHANEL-text.svg" alt="" />
-                        <img src="./images/CHANEL-text.svg" alt="" />
-                        <img src="./images/CHANEL-text.svg" alt="" />
-                    </div>
-                    <div class="img-rotate">
-                        <span>Scroll</span>
-                        <img src="./images/scroll-bg.svg" alt="image" />
-                    </div>
-                </div>
-                <div class="section" id="section2">
-                    <div class="text-area">
-                        <div class="text">
-                            <div>rediscover</div>
-                        </div>
-                        <div class="text">
-                            <div>beauty</div>
-                        </div>
-                        <div class="text">
-                            <div>with CHANEL</div>
-                        </div>
-                    </div>
-                    <div class="img">
-                        <img src="./images/section2-bg.jpg" alt="image" />
-                    </div>
-                    <div class="info">
-                        <h3 class="wani-main">Brand Story</h3>
-                        <div class="description">
-                            아방가르드한 여성이었던 가브리엘 샤넬은 자신의 라이프 스타일과
-                            <br />
-                            다양한 매력으로 샤넬 하우스의 가치를 형성한 선구자였으며,
-                            <br />
-                            오늘날까지 모든 여성들에게 풍부한 영감을 선사하고 있습니다.
-                        </div>
-                        <div class="btn-more">
-                            <a href="#"
-                                >Learn More
-                                <img src="./images/arrow-black-bg.svg" alt="icon" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="section3">
-                    <div class="inner">
-                        <div class="items">
-                            <ul>
-                                <li class="item wani-main">
-                                    <div class="umberic">01</div>
-                                    <h3>CHANCE EAU TENDRE</h3>
-                                    <div class="description">Eau de Toilette Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-01.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">02</div>
-                                    <h3>CHANCE EAU TENDRE</h3>
-                                    <div class="description">Eau de Toilette Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-02.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">03</div>
-                                    <h3>CHANCE EAU VIVE</h3>
-                                    <div class="description">Eau de Toilette Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-03.jpg" alt="image" />
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="item wani-main">
-                                    <div class="umberic">04</div>
-                                    <h3>EAU DE COLOGNE</h3>
-                                    <div class="description">Eau de Toilette</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-04.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">05</div>
-                                    <h3>N°18</h3>
-                                    <div class="description">Eau de Parfum</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-05.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">06</div>
-                                    <h3>LE LION DE CHANEL</h3>
-                                    <div class="description">Eau de Parfum</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-06.jpg" alt="image" />
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="item wani-main">
-                                    <div class="umberic">07</div>
-                                    <h3>N°5 L'EAU</h3>
-                                    <div class="description">Eau de Toilette Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-07.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">08</div>
-                                    <h3>N°5</h3>
-                                    <div class="description">Eau Première Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-08.jpg" alt="image" />
-                                </li>
-                                <li class="item wani-main">
-                                    <div class="umberic">09</div>
-                                    <h3>N°5</h3>
-                                    <div class="description">Eau de Parfum Spray</div>
-                                    <div class="read-more">Read More</div>
-                                    <img src="./images/perfume-09.jpg" alt="image" />
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="section4">
-                    <div class="content-area">
-                        <h2 class="wani-main">
-                            Ombre
-                            <br />
-                            Essentielle
-                        </h2>
-                        <div class="description">
-                            샤넬 스타일을 경험하고 싶으신가요?
-                            <br />
-                            나만의 컬러를 표현해 보세요.
-                        </div>
-                        <div class="btn-more">
-                            <a href="#">Learn More</a>
-                        </div>
-                    </div>
-                    <div class="img-area">
-                        <img class="img1" src="./images/section4-bg-01.jpg" alt="image" />
-                        <img class="img2" src="./images/section4-bg-02.png" alt="image" />
-                    </div>
-                </div>
-                <div class="section" id="section5">
-                    <div class="inner">
-                        <div class="items">
-                            <ul>
-                                <li class="item">
-                                    <div class="img bg-ing-01"></div>
-                                    <h3>NOIR ALLURE</h3>
-                                    <p>47 - ROUGE INTENSE</p>
-                                    <div class="btnArea">
-                                        <a href="#" class="learnmore"> Learn More </a>
+            <!-- //header_warp -->
+
+            <div id="container">
+                <div id="contents">
+                    <!-- 본문 시작 -->
+
+                    <div class="sub_content">
+                        <!-- //side_cont -->
+
+                        <link type="text/css" rel="stylesheet" href="./assets/css/main(1).css" />
+                        <script src="./assets/js/main.js"></script>
+                        <script src="./assets/js/smoothwheel.js"></script>
+                        <div class="main_content">
+                            <div class="vertical_scroll" style="width: 18379px">
+                                <div class="card card1">
+                                    <div class="content_area">
+                                        <div class="img_slide">
+                                            <img src="./images/CHANEL-text.svg" alt="logo" />
+                                            <img src="./images/CHANEL-text.svg" alt="logo" />
+                                            <img src="./images/CHANEL-text.svg" alt="logo" />
+                                        </div>
+                                        <div class="img_rotate">
+                                            <span>Scroll</span>
+                                            <img
+                                                src="./images/scroll-bg.svg"
+                                                alt="image"
+                                                style="transform: rotate(0deg)"
+                                            />
+                                        </div>
                                     </div>
-                                </li>
-                                <li class="item">
-                                    <div class="img bg-ing-02"></div>
-                                    <h3>NOIR ALLURE</h3>
-                                    <p>37 - LILAS</p>
-                                    <div class="description"></div>
-                                    <div class="btnArea">
-                                        <a href="#"> Learn More </a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="img bg-ing-03"></div>
-                                    <h3>NOIR ALLURE</h3>
-                                    <p>57 - ORANGE BRUNI</p>
-                                    <div class="description"></div>
-                                    <div class="btnArea">
-                                        <a href="#"> Learn More </a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="img bg-ing-04"></div>
-                                    <h3>OMBRE ESSENTIELLE</h3>
-                                    <p>226 - ROUGE COSMOS</p>
-                                    <div class="description"></div>
-                                    <div class="btnArea">
-                                        <a href="#"> Learn More </a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="img bg-ing-05"></div>
-                                    <h3>OMBRE ESSENTIELLE</h3>
-                                    <p>232 - LILAS POUDRE</p>
-                                    <div class="description"></div>
-                                    <div class="btnArea">
-                                        <a href="#"> Learn More </a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="img bg-ing-06"></div>
-                                    <h3>OMBRE ESSENTIELLE</h3>
-                                    <p>228 - ROSE CHARNEL</p>
-                                    <div class="description"></div>
-                                    <div class="btnArea">
-                                        <a href="#"> Learn More </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="section6">
-                    <div class="flower">
-                        <img src="./images/section6-bg-04.png" alt="image" />
-                    </div>
-                    <div class="text-area">
-                        <div class="text">
-                            EXTRAODINARY
-                            <br />
-                            HYDATION
-                        </div>
-                    </div>
-                    <div class="img-area">
-                        <img class="img1" src="./images/section6-bg-01.jpg" alt="image" />
-                        <img class="img2" src="./images/section6-bg-02.png" alt="image" />
-                        <img class="img3" src="./images/section6-bg-03.png" alt="image" />
-                    </div>
-                </div>
-                <div class="section" id="section7">
-                    <div class="inner">
-                        <h2 class="wAnimated">
-                            HYDRA BEAUTY
-                            <br />
-                            SKINCARE
-                            <a href="#">Read More</a>
-                        </h2>
-                        <div class="items">
-                            <ul>
-                                <li class="item">
-                                    <div class="numberic">01</div>
-                                    <img src="./images/skin-care-01.jpg" alt="image" />
-                                    <h3>
-                                        HYDRA BEAUTY
-                                        <br />
-                                        MICRO CREME
-                                    </h3>
-                                    <div class="btn-more">
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="numberic">02</div>
-                                    <img src="./images/skin-care-02.jpg" alt="image" />
-                                    <h3>
-                                        HYDRA BEAUTY
-                                        <br />
-                                        MICRO SERUM
-                                    </h3>
-                                    <div class="btn-more">
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="numberic">03</div>
-                                    <img src="./images/skin-care-03.jpg" alt="image" />
-                                    <h3>
-                                        HYDRA BEAUTY
-                                        <br />
-                                        MICRO LIQULD
-                                        <br />
-                                        ESSENCE
-                                    </h3>
-                                    <div class="btn-more">
-                                        <a href="#">Read More</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="section8">
-                    <div class="inner">
-                        <h2 class="wAnimated">
-                            LES RENDEZ
-                            <br />
-                            - VOUS
-                        </h2>
-                        <div class="service">
-                            <ul>
-                                <li class="wAnimated">
-                                    <div class="visual">
+                                </div>
+                                <div class="card card2">
+                                    <div class="text_area">
                                         <div class="text">
-                                            <div class="num">01</div>
-                                            <h3>TONIQUE</h3>
+                                            <div style="transform: translateY(146px); opacity: 0">rediscover</div>
                                         </div>
-                                        <div class="img img01">
-                                            <div class="text">
-                                                <div class="num">01</div>
-                                                <h3>TONIQUE</h3>
-                                            </div>
+                                        <div class="text">
+                                            <div style="transform: translateY(146px); opacity: 0">beauty</div>
                                         </div>
+                                        <div class="text">
+                                            <div style="transform: translateY(146px); opacity: 0">with CHANEL</div>
+                                        </div>
+                                    </div>
+                                    <div class="img">
+                                        <img src="./images/section2-bg.jpg" alt="image" />
                                     </div>
                                     <div class="info">
-                                        <h3>IN BOUTIQUES</h3>
-                                        <div class="cs">
-                                            <div class="btn-more">Book An Appointment</div>
+                                        <h3 class="wani_main fadeInUp">Brand Story</h3>
+                                        <div class="description wani_main fadeInUp" data-wani-delay="0.3s">
+                                            아방가르드한 여성이었던 가브리엘 샤넬은 자신의 라이프 스타일과
+                                            <br />
+                                            다양한 매력으로 샤넬 하우스의 가치를 형성한 선구자였으며,
+                                            <br />
+                                            오늘날까지 모든 여성들에게 풍부한 영감을 선사하고 있습니다.
+                                        </div>
+                                        <div class="btn_more wani_main fadeInUp" data-wani-delay="0.6s">
+                                            <a href="https://fromheras.com/page/about.php"
+                                                >Learn More<img src="./images/arrow-black-bg.svg" alt="icon"
+                                            /></a>
                                         </div>
                                     </div>
-                                </li>
-                                <li class="wAnimated">
-                                    <div class="visual">
-                                        <div class="text">
-                                            <div class="num">02</div>
-                                            <h3>VOUSDU31</h3>
+                                </div>
+                                <div class="card card3 beans">
+                                    <div class="inner">
+                                        <div class="items">
+                                            <ul>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">03</div>
+                                                    <img src="./images/perfume-03.jpg" class="img" />
+                                                    <h3>CHANCE EAU VIVE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp vertical" data-wani-delay="0.2s">
+                                                    <div class="numberic">03</div>
+                                                    <img src="./images/perfume-03.jpg" class="img" />
+                                                    <h3>CHANCE EAU VIVE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">03</div>
+                                                    <img src="./images/perfume-03.jpg" class="img" />
+                                                    <h3>CHANCE EAU VIVE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">03</div>
+                                                    <img src="./images/perfume-03.jpg" class="img" />
+                                                    <h3>CHANCE EAU VIVE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">06</div>
+                                                    <img src="./images/perfume-06.jpg" class="img" />
+                                                    <h3>LE LION DE CHANEL</h3>
+                                                    <div class="description">Eau de Parfum</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">09</div>
+                                                    <img src="./images/perfume-09.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau de Parfum Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">01</div>
+                                                    <img src="./images/perfume-01.jpg" class="img" />
+                                                    <h3>CHANCE EAU TENDRE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">04</div>
+                                                    <img src="./images/perfume-04.jpg" class="img" />
+                                                    <h3>EAU DE COLOGNE</h3>
+                                                    <div class="description">Eau de Toilette</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">07</div>
+                                                    <img src="./images/perfume-07.jpg" class="img" />
+                                                    <h3>N°5 L'EAU</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">02</div>
+                                                    <img src="./images/perfume-02.jpg" class="img" />
+                                                    <h3>CHANCE EAU TENDRE</h3>
+                                                    <div class="description">Eau de Toilette Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">05</div>
+                                                    <img src="./images/perfume-05.jpg" class="img" />
+                                                    <h3>N°18</h3>
+                                                    <div class="description">Eau de Parfum</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">08</div>
+                                                    <img src="./images/perfume-08.jpg" class="img" />
+                                                    <h3>N°5</h3>
+                                                    <div class="description">Eau Première Spray</div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
-                                        <div class="img img02">
-                                            <div class="text">
-                                                <div class="num">02</div>
-                                                <h3>VOUSDU31</h3>
+                                    </div>
+                                </div>
+                                <div class="card card4">
+                                    <div class="content_area">
+                                        <h2 class="wani_main fadeInUp">
+                                            Ombre
+                                            <br />
+                                            Essentielle
+                                        </h2>
+                                        <div class="description wani_main fadeInUp" data-wani-delay="0.3s">
+                                            샤넬 스타일을 경험하고 싶으신가요?
+                                            <br />
+                                            나만의 컬러를 표현해 보세요.
+                                        </div>
+                                        <div class="btn_more wani_main fadeInUp" data-wani-delay="0.6s">
+                                            <a href="https://fromheras.com/page/find_beans.php">Learn More</a>
+                                        </div>
+                                    </div>
+                                    <div class="img_area">
+                                        <img class="img1" src="./images/section4-bg-01.jpg" />
+                                        <img class="img2" src="./images/section4-bg-02.png" />
+                                    </div>
+                                </div>
+                                <div class="card card5">
+                                    <div class="inner">
+                                        <div class="items">
+                                            <ul>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-01.png)"
+                                                    ></div>
+                                                    <h3>NOIR ALLURE</h3>
+                                                    <p>47 - ROUGE INTENSE</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-02.png)"
+                                                    ></div>
+                                                    <h3>NOIR ALLURE</h3>
+                                                    <p>37 - LILAS</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-03.png)"
+                                                    ></div>
+                                                    <h3>NOIR ALLURE</h3>
+                                                    <p>57 - ORANGE BRUNI</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-04.png)"
+                                                    ></div>
+                                                    <h3>OMBRE ESSENTIELLE</h3>
+                                                    <p>226 - ROUGE COSMOS</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-05.png)"
+                                                    ></div>
+                                                    <h3>OMBRE ESSENTIELLE</h3>
+                                                    <p>232 - LILAS POUDRE</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="letter"><img src="./images/hover-logo.svg" /></div>
+                                                    <div
+                                                        class="img"
+                                                        style="background-image: url(./images/make-up-06.png)"
+                                                    ></div>
+                                                    <h3>OMBRE ESSENTIELLE</h3>
+                                                    <p>228 - ROSE CHARNEL</p>
+                                                    <div class="description"></div>
+                                                    <div class="btnArea">
+                                                        <a href="#" class="learnMore">Learn More</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card6">
+                                    <div class="animal wani_main fadeInUp">
+                                        <img src="./images/section6-bg-04.png" />
+                                    </div>
+                                    <div class="text_area">
+                                        <div class="text" style="left: 0px">
+                                            EXTRAODINARY
+                                            <br />
+                                            HYDATION
+                                        </div>
+                                    </div>
+                                    <div class="img_area">
+                                        <img class="img1" src="./images/section6-bg-01.jpg" />
+                                        <img class="img2" src="./images/section6-bg-02.png" />
+                                        <img class="img3" src="./images/section6-bg-03.png" />
+                                    </div>
+                                </div>
+                                <div class="card card7 beans">
+                                    <div class="inner">
+                                        <h2 class="wani_main fadeInUp">
+                                            HYDRA BEAUTY
+                                            <br />
+                                            SKINCARE
+                                            <a href="#">Read More</a>
+                                        </h2>
+
+                                        <div class="items">
+                                            <ul>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">01</div>
+                                                    <img src="./images/skin-care-01.jpg" class="img" />
+                                                    <h3>
+                                                        HYDRA BEAUTY
+                                                        <br />
+                                                        MICRO CREME
+                                                    </h3>
+                                                    <div class="description"></div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp vertical" data-wani-delay="0.2s">
+                                                    <div class="numberic">02</div>
+                                                    <img src="./images/skin-care-02.jpg" class="img" />
+                                                    <h3>
+                                                        HYDRA BEAUTY
+                                                        <br />
+                                                        MICRO SERUM
+                                                    </h3>
+                                                    <div class="description"></div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                                <li class="item wani_main fadeInUp" data-wani-delay="0.2s">
+                                                    <div class="numberic">03</div>
+                                                    <img src="./images/skin-care-03.jpg" class="img" />
+                                                    <h3>
+                                                        HYDRA BEAUTY
+                                                        <br />
+                                                        MICRO LIQULD
+                                                        <br />
+                                                        ESSENCE
+                                                    </h3>
+                                                    <div class="description"></div>
+                                                    <div class="btn_more">
+                                                        <a href="#">Read More</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card8">
+                                    <div class="inner">
+                                        <h2 class="wani_main fadeInUp">LES RENDEZ<br />- VOUS</h2>
+                                        <div class="store">
+                                            <ul>
+                                                <li class="wani_main fadeInUp">
+                                                    <div class="visual">
+                                                        <div class="text">
+                                                            <div class="num">01</div>
+                                                            <h3>TONIQUE</h3>
+                                                        </div>
+                                                        <div
+                                                            class="img"
+                                                            style="background-image: url(./images/section8-bg-01.jpg)"
+                                                        >
+                                                            <div class="text">
+                                                                <div class="num">01</div>
+                                                                <h3>TONIQUE</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>IN BOUTIQUES</h3>
+                                                        <div class="cs">
+                                                            <div class="addr">Book An Appointment</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="wani_main fadeInUp">
+                                                    <div class="visual">
+                                                        <div class="text">
+                                                            <div class="num">02</div>
+                                                            <h3>VOUSDU31</h3>
+                                                        </div>
+                                                        <div
+                                                            class="img"
+                                                            style="background-image: url(./images/section8-bg-02.png)"
+                                                        >
+                                                            <div class="text">
+                                                                <div class="num">02</div>
+                                                                <h3>VOUSDU31</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>IN BOUTIQUES</h3>
+                                                        <div class="cs">
+                                                            <div class="addr">Book An Appointment</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="wani_main fadeInUp">
+                                                    <div class="visual">
+                                                        <div class="text">
+                                                            <div class="num">03</div>
+                                                            <h3>ALCHIMIQUE</h3>
+                                                        </div>
+                                                        <div
+                                                            class="img"
+                                                            style="background-image: url(./images/section8-bg-03.png)"
+                                                        >
+                                                            <div class="text">
+                                                                <div class="num">03</div>
+                                                                <h3>ALCHIMIQUE</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>IN BOUTIQUES</h3>
+                                                        <div class="cs">
+                                                            <div class="addr">Book An Appointment</div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card9">
+                                    <div class="content_area">
+                                        <img src="./images/chanel-logo-red.svg" class="wani_main fadeIn" />
+                                    </div>
+                                </div>
+                                <div class="card card10">
+                                    <div class="white_area"></div>
+                                    <div class="content_area">
+                                        <div class="ft_logo"><img src="./images/chanel-logo.svg" /></div>
+                                        <div class="sns">
+                                            <a href="#" target="_blank"
+                                                >Insta<img src="./images/arrow_line_wh.svg"
+                                            /></a>
+                                            <a href="#" target="_blank"
+                                                >Facebook<img src="./images/arrow_line_wh.svg"
+                                            /></a>
+                                            <a href="#" target="_blank"
+                                                >Youtube<img src="./images/arrow_line_wh.svg"
+                                            /></a>
+                                        </div>
+                                        <div class="ft_info">
+                                            <div class="corp">
+                                                <span>
+                                                    CHANEL.COM을 탐색해 보세요
+                                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
+                                                </span>
+                                                <span>
+                                                    ONLINE SERVICES
+                                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
+                                                </span>
+                                                <span>
+                                                    BOUTIQUE SERVICES
+                                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
+                                                </span>
+                                                <span>
+                                                    THE HOUSE OF CHANEL
+                                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
+                                                </span>
                                             </div>
                                         </div>
+                                        <button class="btn_first js_btn_first">GO TO FIRST</button>
                                     </div>
-                                    <div class="info">
-                                        <h3>IN BOUTIQUES</h3>
-                                        <div class="cs">
-                                            <div class="btn-more">Book An Appointment</div>
-                                        </div>
+                                    <div class="copyright">
+                                        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 만들어진 사이트입니다.
+                                        <br />
+                                        <img src="./images/copylight.svg" alt="icon" />
+                                        BRILL.K PORTFOLIO
                                     </div>
-                                </li>
-                                <li class="wAnimated">
-                                    <div class="visual">
-                                        <div class="text">
-                                            <div class="num">03</div>
-                                            <h3>ALCHIMIQUE</h3>
-                                        </div>
-                                        <div class="img img03">
-                                            <div class="text">
-                                                <div class="num">03</div>
-                                                <h3>ALCHIMIQUE</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <h3>IN BOUTIQUES</h3>
-                                        <div class="cs">
-                                            <div class="btn-more">Book An Appointment</div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="section" id="section9">
-                    <div class="content-area">
-                        <img src="./images/chanel-logo-red.svg" alt="logo" />
-                    </div>
-                </div>
-                <div class="section" id="section10">
-                    <div class="white-area"></div>
-                    <div class="content-area">
-                        <div class="ft-logo">
-                            <img src="./images/chanel-logo.svg" alt="logo" />
-                        </div>
-                        <div class="sns">
-                            <a href="#">
-                                Insta
-                                <img src="./images/arrow_line_wh.svg" alt="icon" />
-                            </a>
-                            <a href="#">
-                                Facebook
-                                <img src="./images/arrow_line_wh.svg" alt="icon" />
-                            </a>
-                            <a href="#">
-                                Youtube
-                                <img src="./images/arrow_line_wh.svg" alt="icon" />
-                            </a>
-                        </div>
-                        <div class="ft-info">
-                            <div class="crop">
-                                <span>
-                                    CHANEL.COM을 탐색해 보세요
-                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
-                                </span>
-                                <span>
-                                    ONLINE SERVICES
-                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
-                                </span>
-                                <span>
-                                    BOUTIQUE SERVICES
-                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
-                                </span>
-                                <span>
-                                    THE HOUSE OF CHANEL
-                                    <img src="./images/arrow_line_wh.svg" alt="icon" />
-                                </span>
+                                </div>
+                                <p class="cover"></p>
                             </div>
                         </div>
-                        <a class="btn-first" href="/">GO TO FIRST</a>
-                    </div>
-                    <div class="copyright">
-                        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 만들어진 사이트입니다.
-                        <br />
-                        <img src="./images/copylight.svg" alt="icon" />
-                        BRILL.K PORTFOLIO
                     </div>
                 </div>
-            </div>
-            <div class="search-button">
-                <button id="sch-icon">
-                    <img src="./images/search-white.png" alt="icon" class="icon-b" />
-                </button>
             </div>
         </div>
     </body>

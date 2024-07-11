@@ -1,0 +1,43 @@
+.wani, .wani_main {
+	opacity:0;
+	animation-iteration-count: 1;
+	animation-timing-function: ease;
+	animation-direction:normal;
+	animation-fill-mode: forwards;
+}
+
+.wani_main.fadeInUp{
+	animation-name: unset !important;
+}
+.fadeInUp.wAnimated{
+	animation-duration: 1.2s;
+	animation-name: wFadeInUp !important;
+}
+.wani_main.fadeIn{
+	animation-name:unset !important;
+}
+.fadeIn.wAnimated{
+	animation-duration: 1.2s;
+	animation-name: wFadeIn !important;
+}
+
+
+@keyframes wFadeInUp {
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes wFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

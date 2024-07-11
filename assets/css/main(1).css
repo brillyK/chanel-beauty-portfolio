@@ -1,0 +1,811 @@
+body {
+	width:100%;
+	height:100vh;
+	overflow:hidden;
+}
+#contents {
+	padding:0;
+}
+#contents .sub_content {
+	max-width:100%;    
+}
+.main_content {
+	overflow-y:hidden;
+	overflow-x:scroll;
+	width:100%;
+	height:100vh;
+}
+/* .main_content *:hover { cursor : url('../img/cursor.png') 20 20, auto !important; } */
+
+.vertical_scroll {
+	width:1000%;
+	height:100vh;
+	position:relative;
+}
+
+.vertical_scroll > div {
+	height:100vh;
+	float:left;
+}
+
+.vertical_scroll .card1 { 
+	width:100vw;
+	padding-top:72px;
+	
+}
+.card1 .content_area { 
+	width:100%;
+	height:100%;
+	background: url("../img/card1_bg.png") no-repeat center;
+	background-size:cover;
+	overflow:hidden; 
+	position:relative;
+}
+.card1 .content_area .img_slide {
+	width:5000px;
+	position:absolute;
+	top:50%;
+	transform:translateY(calc(-50% - 30px));
+	animation-name: main_slide; 
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-fill-mode: none;
+	animation-fill-mode:forwards;
+	font-size:0;
+}
+.card1 .content_area .img_slide img{
+	width:1412px;
+	height:174px;
+	margin-right:100px;
+} 
+
+@keyframes main_slide {
+	from {left : 0;}
+	to {left : -1512px;}
+}
+
+.card1 .content_area .img_rotate {
+	position:absolute;
+	right:92px;
+	bottom:86px;
+}
+.card1 .content_area .img_rotate span {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	color:#fff;
+	font-family:"Minion Pro";
+	font-size:24px;
+	font-weight: 100;
+}
+.card1 .content_area .img_rotate img {
+	width:164px;
+	transform: rotate(0deg);
+}
+
+
+/* NOTE: Card2 */	
+.vertical_scroll .card2 { 
+	width:1650px;
+	background: #fff;
+	position:relative;
+}
+.card2 .text_area{
+	font-family:"Minion Pro";
+	font-size:132px;
+	color:#FF5145;
+	position:absolute;
+	top:50%;
+	left:100px;
+	transform: translateY(-50%);
+	z-index:2;
+}
+.card2 .text_area .text{
+	overflow:hidden;	
+	position:relative;
+	line-height:146px;
+	z-index:2;
+}
+.card2 .text_area .text > div{
+	transform: translateY(146px);
+	opacity: 1;
+}
+.card2 .img {
+	position:absolute;
+	top:0;
+	left:790px;
+	z-index:1;
+}
+.card2 .img img{
+	width:747px;
+}
+.card2 .info {
+	position:absolute;
+	top:68%;
+	left:953px;
+}
+.card2 .info h3 {
+	font-size:24px;
+	font-family:'Minion Pro';	
+	font-weight:normal;
+}
+.card2 .info .description {
+	margin-top:6px;
+	font-size:14px;
+	color:#757575;	
+}
+.card2 .info .btn_more {
+	margin-top:45px;
+}
+.card2 .info .btn_more a{
+	font-size:14px;	
+	font-family:'Minion Pro';
+}
+.card2 .info .btn_more img{
+	width:32px;
+	vertical-align: middle;
+	margin-left:8px;	
+}
+
+
+
+
+
+
+
+
+.vertical_scroll .card3 { 
+	width:2065px;
+	background: #fff;
+	border-left:1px solid rgba(151, 151, 151, 0.2);
+}
+
+
+
+
+
+
+.vertical_scroll .card4 { 
+	width:1812px;
+	background: #FF5145;
+	position:relative;
+}
+.card4 .content_area{
+	display:inline-block;
+	position:absolute;
+	left:180px;
+	top:50%;
+	transform: translateY(-50%);
+	z-index:2;
+}
+.card4 .content_area h2 {
+	font-size:132px;
+	font-family:'Minion Pro';	
+	font-weight: normal;
+	line-height:146px;
+	color:#fff;
+	
+}
+.card4 .content_area .description {
+	margin-top:40px;
+	font-size:14px;
+	line-height:24px;
+	color:#fff;	
+}
+.card4 .content_area .btn_more {
+	margin-top:40px;	
+}
+.card4 .content_area .btn_more a{
+	display:inline-block;
+	width:105px;
+	height:44px;
+	line-height:42px;
+	background:#000;
+	color:#fff;
+	border-radius:22px;
+	font-size:14px;	
+	font-family:'Minion Pro';	
+	text-align:center;
+}
+.card4 .img_area {
+	position:absolute;
+	bottom:0;
+	right:48px;
+	width:882px;
+	height:768px;
+}
+.card4 .img_area img{
+	position:absolute;	
+}
+.card4 .img_area .img1{
+	bottom: 38vh;
+	right: 49vh;
+	height: 52vh;
+}
+.card4 .img_area .img2{
+	bottom:0;
+	right:0;
+	height: 65vh;
+}
+
+
+
+
+
+
+
+.vertical_scroll .card5 { 
+	width:1643px;
+	background: #fff;
+}
+.card5 .inner {
+	margin-top:50vh;
+	transform: translateY(calc(-50% + 35px));
+}
+.card5 h2 {
+	display:inline-block;
+	padding: 0px 0 72px 181px;	
+	font-size:60px;
+	font-family: 'Minion Pro';
+	font-weight:normal;
+	line-height:62px;
+	color:#FF5145;
+}
+.card5 h2 a {
+	display:block;
+	font-family: 'Minion Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration-line: underline;
+	color: #FF5145;
+	width:240px;
+}
+.card5 .items {
+	width:100%;
+	padding:0 0 0 181px;	
+}
+.card5 .item {
+	position:relative;
+	display:inline-block;	
+	width:266px;
+	vertical-align: top;
+	margin-right:73px;
+}
+.card5 .item .img{
+	width:266px;
+	height:309px;
+	background-size:cover;
+	background-position:center;
+	border-top-left-radius:133px;	
+	border-top-right-radius:133px;
+}
+.card5 .item .letter{
+	position:absolute;
+	top:-29px;
+	right:-58px;
+	display:none;
+}
+.card5 .item .letter img{
+	width:125px;
+}
+.card5 .item:hover .letter{
+	display:block;
+}
+.card5 .item h3 {
+	margin-top:32px;
+	font-size:21px;
+	line-height:24px;
+	font-family: 'Minion Pro';
+	font-weight: normal;
+}
+.card5 .item .description {
+	margin-top:15px;
+	color:rgba(0, 0, 0, 0.8);
+	font-size:12px;
+	line-height:22px;
+	display:-webkit-box; 
+	word-wrap:break-word; 
+	-webkit-line-clamp:2; 
+	-webkit-box-orient:vertical; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.card5 .item .btnArea {
+	margin-top:33px;
+	height:44px;
+}
+.card5 .item a.learnMore{
+	margin:0 auto 0;
+	display:none;
+	width:105px;
+	height:44px;
+	line-height:44px;
+	text-align: center;
+	border-radius:22px;
+	background:#000;
+	font-family: 'Minion Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.card5 .item:hover a.learnMore{
+	display:block;	
+}
+.card5 .btn_more {
+	text-align:center;
+	margin-top:33px;
+}
+.card5 .btn_more a{
+	display:inline-block;
+	padding: 0 22px;
+	height:44px;
+	line-height:46px;
+	background:#000;
+	border-radius:22px;
+	color:#fff;
+	font-size:14px;
+	font-family: 'Minion Pro';
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+.vertical_scroll .card6 { 
+	width:2180px;
+	background: #FBFBFB;
+	position:relative;
+}
+.card6 .animal {
+	width:304px;
+	height:421px;
+	margin:330px 0 0 378px;
+	text-align:center;
+}
+.card6 .animal img{
+	width:193px;	
+	margin-top:39px;
+}
+.card6 .text_area {
+	width:700px;
+	height:437px;
+	position:absolute;
+	top:50%;
+	left:124px;
+	z-index:2;
+	transform: translateY(calc(-50% + 35px))
+}
+.card6 .text_area .text{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:132px;
+	line-height:146px;	
+	font-family: 'Minion Pro';
+	color:#EFEFEF;
+	
+}
+.card6 .img_area {
+	width:960px;
+	height:750px;
+	position:absolute;
+	bottom:0;
+	left:876px;
+}
+.card6 .img_area .img1{
+	width:460px;	
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+.card6 .img_area .img2{
+	width:320px;	
+	position:absolute;
+	bottom:0px;
+	left:311px;
+}
+.card6 .img_area .img3{
+	width:230px;	
+	position:absolute;
+	top:200px;
+	left:730px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.vertical_scroll .card7 { 
+	width:2065px;
+	background: #fff;
+	border-left:1px solid rgba(151, 151, 151, 0.2);
+	border-right:1px solid rgba(151, 151, 151, 0.2);
+}
+
+
+
+
+.vertical_scroll .card8 { 
+	width:1869px;
+	background: #fff;
+}
+.card8 .inner {
+	margin-top:50vh;
+	transform: translateY(calc(-50% + 35px));
+}
+.card8 h2 {
+	display:inline-block;	
+	padding: 0px 190px 0 124px;	
+	font-size:60px;
+	font-family: 'Minion Pro';
+	font-weight:normal;
+	line-height:62px;
+	color:#FF5145;
+	vertical-align: middle;
+}
+.card8 .store {
+	display:inline-block;	
+	vertical-align: middle;
+}
+.card8 .store li{
+	display:inline-block;
+	text-align:center;	
+	height:535px;
+	margin-top:140px;
+	margin-right:108px;
+	cursor:pointer;
+	vertical-align: top;
+}
+.card8 .store li .visual{
+	width:276px;
+	padding-top:66px;
+	padding-bottom:6px;	
+	position:relative;
+	height:204px;
+	transition: ease 0.5s all;
+}
+.card8 .store li .visual .num{
+	font-size:60px;
+	font-family: 'Minion Pro';
+	font-weight:normal;
+	line-height:62px;
+	color:rgba(0, 0, 0, 0.1);
+}
+.card8 .store li .visual h3{
+	margin-top:8px;	
+	font-size:60px;
+	font-family: 'Minion Pro';
+	font-weight:normal;
+	line-height:62px;
+}
+.card8 .store li .visual > .text h3{
+	transition: ease 0.5s all;
+}
+.card8 .store li .visual .text {
+	position:absolute;
+	top:66px;
+	left:50%;
+	transform: translateX(-50%);
+	transition: ease 0.5s all;
+}
+
+.card8 .store li .visual .img {
+	opacity:0;
+	background:#fff;
+	width:100%;
+	height:204px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	transition: ease 0.5s all;
+	background:url("../img/card8_img1.png") no-repeat;
+	background-size:276px;
+}
+.card8 .store li .visual .img .num{
+	color:#fff;	
+}
+.card8 .store li .visual .img .text{
+	color:#fff;
+}
+
+.card8 .store li:hover .visual{
+	height:396px;	
+}
+.card8 .store li:hover .visual > .text h3{
+	color:#FF3B38;
+}
+.card8 .store li:hover .img{
+	opacity:1;
+	height:396px;
+}
+.card8 .store li .info h3 {
+	padding-top:32px;
+	font-size:18px;
+	font-weight:normal;
+}
+.card8 .store li .info .cs {
+	margin-top:14px;	
+}
+.card8 .store li .info .cs span{
+	display:inline-block;
+	margin-top:8px;	
+	font-size:13px;
+}
+
+	
+	
+
+
+.vertical_scroll .card9 { 
+	width:100vw;
+	
+}
+
+.card9 .content_area{ 
+	width:100vw;
+	height:100vh;
+	background: url("../img/card9_bg.png") no-repeat center;
+	background-size:cover;
+	position:relative;
+}
+.card9.is-fixed .content_area{ 
+	position:fixed;
+	top:0;
+	left:0;	
+}
+.card9 .content_area img{
+	width:522px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+} 
+
+.vertical_scroll .card10 { 
+	width:1258px;
+	background: #000;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.card10 .white_area {
+	width:1258px;
+	height:72px;
+	background:#fff;
+}
+.card10 .content_area {
+	width:867px;
+	color:#fff;
+	position:absolute;
+	top:50%;
+	left:194px;
+	transform: translateY(-50%);
+} 
+.card10 .content_area a {
+	color:#fff;
+} 
+
+.card10 .ft_logo img {
+	width:189px;
+}
+
+.card10 .sns {
+	margin-top:18px;	
+	font-size:16px;
+	font-family:'SFPro';
+}
+.card10 .sns a{
+	margin-right:16px;	
+	text-decoration: underline;
+}
+.card10 .sns a img{
+	width:5.5px;
+	margin-left:4px;
+	vertical-align: middle;
+}
+.card10 .ft_info {
+	margin-top:32px;
+}
+.card10 .ft_info .corp{
+	display:inline-block;
+	font-size:14px;
+	line-height:30px;	
+	margin-right:60px;
+	vertical-align: top;
+}
+.card10 .ft_info .corp2{
+	display:inline-block;
+	font-size:14px;
+	line-height:30px;	
+	vertical-align: top;
+	width:100%;
+	margin-bottom:13px;
+	color:#fff;
+}
+.card10 .ft_info .split {
+	position:relative;
+	padding:0 8px;
+}
+.card10 .ft_info .split:after{
+	content:"";
+	width:1px;
+	height:10px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	background:rgba(216, 216, 216, 0.12);
+	display:block;
+}
+.card10 .ft_info .copyright{
+	display:inline-block;
+	font-size:14px;
+	line-height:30px;	
+	color:rgba(255,255,255,0.6);
+}
+.card10 .ft_info .copyright .agree a:first-child{
+	padding-right:17px;
+	margin-right:12px;	
+	position:relative;
+}
+.card10 .ft_info .copyright .agree a:first-child::after{
+	content:"";
+	width:1px;
+	height:10px;
+	position:absolute;
+	top:4px;
+	right:0;
+	background:rgba(216, 216, 216, 0.12);
+	display:block;
+}
+.card10 .btn_first{
+	color:#fff;
+	font-size:16px;
+	font-family: 'Minion Pro';
+	position:absolute;
+	top:50%;
+	right:0;
+	transform: translateY(-50%);
+	height:32px;
+	line-height:32px;
+	padding-left:44px;
+}
+
+.card10 .btn_first::before{
+	content:"";
+	width:32px;
+	height:32px;	
+	border-radius: 50%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:#fff url("../img/icon_first_arrow.png") no-repeat center;
+	background-size:8px;
+}
+
+
+.beans .inner{
+	margin-top:50vh;
+	transform: translateY(calc(-50% + 35px));
+}
+.beans h2 {
+	display:inline-block;
+	padding: 0px 0 70px 112px;	
+	font-size:60px;
+	font-family: 'Minion Pro';
+	font-weight:normal;
+	line-height:62px;
+	color:#FF5145;
+}
+.beans h2 a {
+	display:block;
+	font-family: 'Minion Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration-line: underline;
+	color: #FF5145;
+	width:240px;
+}
+.beans .items {
+	width:100%;
+	padding:86px 0 0 44px;	
+	border-top:1px solid rgba(151, 151, 151, 0.2);
+}
+.beans .item {
+	position:relative;
+	display:inline-block;	
+	padding-right:279px;
+	width:526px;
+	height:378px;
+	vertical-align: top;
+	margin-left:68px;
+}
+.beans .item .img{
+	width:252px;
+	height:378px;
+	object-fit: cover;
+	object-position: center;
+	position:absolute;
+	top:0;
+	right:0;
+	
+}
+.beans .numberic {
+	font-size:28px;
+	font-family: 'Minion Pro';
+	color:#DCDCDC;
+	line-height:1;
+}
+.beans h3 {
+	margin-top:28px;
+	font-weight: normal;
+	font-size:28px;
+	font-family: 'Minion Pro';
+	line-height:30px;	
+	word-break: keep-all;
+}
+.beans .description {
+	margin-top:12px;
+	color:#757575;
+	display:-webkit-box; 
+	word-wrap:break-word; 
+	-webkit-line-clamp:2; 
+	-webkit-box-orient:vertical; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.beans .price {
+	font-size:12px;
+	color:#FE6150;
+	line-height:29px;
+	font-family: 'Minion Pro';
+}
+.beans .price strong{
+	font-size:18px;	
+	font-weight: normal;
+}
+.beans .price .slash{
+	font-size:18px;	
+}
+
+.beans .btn_more {
+	position:absolute;
+	left:0;
+	bottom:0;
+	font-size:14px;
+	font-family: 'Minion Pro';
+	text-decoration: underline;
+}
+
+.beans .item.vertical {
+	padding-right:430px;
+	width:677px;
+}
+.beans .item.vertical .img{
+	width:403px;
+	height:269px;
+	object-fit: cover;
+	object-position: center;
+	top:auto;
+	bottom:0;
+}
