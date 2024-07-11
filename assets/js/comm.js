@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const section2 = document.getElementById('section2')
     const horizontalScroll = document.getElementById('horizontalScroll')
     const imgRotate = document.querySelector('.img-rotate img')
+    const textArea = document.querySelector('.text-area .text')
 
     horizontalScroll.addEventListener('wheel', function (event) {
         event.preventDefault() // 기본 스크롤 동작 방지
@@ -26,4 +27,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const rotateAngle = scrollPercent * 1080 // 회전 각도 계산
         imgRotate.style.transform = `rotate(${rotateAngle}deg)`
     })
+
+    function checkScroll() {
+        const section2Top = section2.getBoundingClientRect().top
+        const windowHeight = window.innerHeight
+
+        if (section2Top <= windowHeight * 0.8) {
+            textArea.classList.add('visible')
+        }
+    }
+
+    window.addEventListener('scroll', checkScroll)
+    checkScroll() // 페이지 로드 시 초기 상태 체크
 })
